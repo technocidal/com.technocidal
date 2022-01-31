@@ -11,7 +11,7 @@ I'm a Software Engineer by trade, so this site will mainly focus on technology a
 
 ### What about the name **technocidal**?
 
-The first mention of the word "technocidal" I was able to find is in [this delightful Wired article](https://www.wired.com/1998/08/die/) from 1998 about competitve robot wrestling. A more modern definition can be found on [Urban Dictionary](https://www.urbandictionary.com/define.php?term=technocidal) 
+The first mention of the word "technocidal" I was able to find is in [this delightful Wired article](https://www.wired.com/1998/08/die/) from 1998 about [Robot Wars](https://robotwars.fandom.com/wiki/Robot_Wars). A more modern definition can be found on [Urban Dictionary](https://www.urbandictionary.com/define.php?term=technocidal) 
 which defines *technocidal* as the urge to kill a piece of "malfuntioning" electrical equipment.
 
 I'm totally onboard with robot wrestling and also very familiar with the emotion described by the latter definition, so the word really stuck with me.
