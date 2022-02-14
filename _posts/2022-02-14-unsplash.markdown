@@ -1,0 +1,66 @@
+---
+layout: post
+title: Unsplash
+---
+
+A couple of weeks ago I've submitted pictures I took to Unsplash for the first time.
+This was a fairly weird experience for me. Photography appears to be such a widespread hobby amongst programmers, that it feels almost too cliché to admit to it publicly.
+Getting into cameras seems to be just what you do, when you work in technology.
+
+It was also a bit scary. While posting to social media always felt really low stakes, publishing you work on a dedicated photography platform like Unsplash felt intimidating.
+
+When choosing some of my first pictures, I realised, just how hard it is, to not be too critical with your own work. The first album I'm going through now contains all the pictures I took during a vacation to Israel. This was one of the most interesting experiences of my whole life, so it seemed like a good choice to start there. But is there anything interesting in there? I mean, most of the "classic street photography style" pictures mainly make sense to me and a good chunk of the album are basically pictures I took for the sake of having a picture of what I saw during the trip. They are pretty recognisable by their poor composition, contrast and overall apparent lack of care. I just wanted a picture to remember that when I visited Masada, an ancient Roman fortress, there was a tiny model of the whole structure that had dollhouse-like mosaic floors.
+
+<style type="text/css">
+	.gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+		grid-gap: 1.5rem;
+		justify-items: center;
+		align-items: end;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.spotlight {
+		height: 24rem;
+		text-align: center;
+	}
+	
+	.spotlight-img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	
+	.spotlight-img:hover {
+		opacity: .7;
+	}
+	
+	.gallery-img {
+		max-width: 100%;
+		height: auto;
+		object-fit: cover;
+		transition: opacity 0.25s ease-in-out;
+	}
+	
+	.gallery-img:hover {
+		opacity: .7;
+	}
+</style>
+
+<div class="gallery-grid">
+	<img class="gallery-img" src="/assets/2022-02-14-unsplash/model.jpg" alt="A scale model of the fortress of Masada" />
+	<img class="gallery-img" src="/assets/2022-02-14-unsplash/model1.jpg" alt="Interior of the model showing a room with the previously mentined mosaic floors" />
+	<img class="gallery-img" src="/assets/2022-02-14-unsplash/model2.jpg" alt="Interior of the model showing an atrium like room with columns on both sides" />
+</div>
+
+<br />
+But going through the album also made me realise that there was one motive that comes up quite a lot - Flowers. Everyone likes pictures of flowers. You can look through the profile pictures/home screens of the older part of your family and I bet that a lot of them will have picked flowers to put there.
+
+So that's where I started. I edited and upload a picture of an almond tree flower. It's a start and let's see where this goes.
+
+<div class="spotlight">
+	<a href="https://unsplash.com/photos/MafEQrhuQ-E">
+		<img class="spotlight-img" src="/assets/2022-02-14-unsplash/flower.jpg" alt="A small bunch of white almond tree flower on the stem with a heavily blurred background" />
+</a>
+</div>
