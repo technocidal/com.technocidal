@@ -49,9 +49,9 @@ When choosing some of my first pictures, I realised, just how hard it is, to not
 </style>
 
 <div class="gallery-grid">
-	<img class="gallery-img" src="/assets/2022-02-14-unsplash/model.jpg" alt="A scale model of the fortress of Masada" />
-	<img class="gallery-img" src="/assets/2022-02-14-unsplash/model1.jpg" alt="Interior of the model showing a room with the previously mentined mosaic floors" />
-	<img class="gallery-img" src="/assets/2022-02-14-unsplash/model2.jpg" alt="Interior of the model showing an atrium like room with columns on both sides" />
+  {% responsive_image path: assets/2022-02-14-unsplash/model.jpg class: "gallery-img" alt: "A scale model of the fortress of Masada" %}
+  {% responsive_image path: assets/2022-02-14-unsplash/model1.jpg class: "gallery-img" alt: "Interior of the model showing a room with the previously mentined mosaic floors" %}
+  {% responsive_image path: assets/2022-02-14-unsplash/model2.jpg class: "gallery-img" alt: "Interior of the model showing an atrium like room with columns on both sides" %}
 </div>
 
 <br />
@@ -61,6 +61,6 @@ So that's where I started. I edited and upload a picture of an almond tree flowe
 
 <div class="spotlight">
 	<a href="https://unsplash.com/photos/MafEQrhuQ-E">
-		<img class="spotlight-img" src="/assets/2022-02-14-unsplash/flower.jpg" alt="A small bunch of white almond tree flower on the stem with a heavily blurred background" />
+    {% responsive_image path: assets/2022-02-14-unsplash/flower.jpg class: "spotlight-img" alt: "A small bunch of white almond tree flower on the stem with a heavily blurred background" %}
 </a>
 </div>

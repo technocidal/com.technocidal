@@ -32,6 +32,15 @@ theme: minima
 show_excerpts: true
 plugins:
   - jekyll-feed
+  - jekyll-responsive-image
+  
+responsive_image:
+  template: _includes/responsive-image.html
+  sizes:
+    - width: 320
+    - width: 480
+    - width: 800
+  strip: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
