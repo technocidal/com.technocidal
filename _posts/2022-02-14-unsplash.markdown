@@ -49,7 +49,6 @@ When choosing some of my first pictures, I realised, just how hard it is, to not
 </style>
 
 <div class="gallery-grid">
-  {% responsive_image path: assets/2022-02-14-unsplash/model.jpg class: "gallery-img" alt: "A scale model of the fortress of Masada" %}
   {% responsive_image path: assets/2022-02-14-unsplash/model1.jpg class: "gallery-img" alt: "Interior of the model showing a room with the previously mentined mosaic floors" %}
   {% responsive_image path: assets/2022-02-14-unsplash/model2.jpg class: "gallery-img" alt: "Interior of the model showing an atrium like room with columns on both sides" %}
 </div>
