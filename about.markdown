@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+{{ site.description }}
+
 > **technocidal**
 > <br />
 > homicide for technology; wanting to kill a piece of electrical equipment <br/>
@@ -12,5 +14,3 @@ permalink: /about/
 > by oojamaflip December 4, 2013
 <br/>
 > Source: [Urban Dictionary - technocidal](https://www.urbandictionary.com/define.php?term=technocidal)
-
-{{ site.description }}
