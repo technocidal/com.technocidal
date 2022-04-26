@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: post+image
 title: Unsplash
+path_to_image: /assets/flower.jpg
 ---
 
 A couple of weeks ago I've submitted pictures I took to Unsplash for the first time.
