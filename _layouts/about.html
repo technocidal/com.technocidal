@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <style>
+      .about-image-container {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      
+      .about-image {
+        border-radius: 50%;
+      }
+    </style>
+    <div class="about-image-container">
+      <img class="about-image" src="/assets/profile.jpg" width="180" height="180"/>
+    </div>
+	  <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-content">
+	 {{ content }}
+  </div>
+
+</article>
