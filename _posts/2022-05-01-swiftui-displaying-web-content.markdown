@@ -14,7 +14,7 @@ To get things started open a new file and import `WebKit`. We need this to have 
 import WebKit
 ```
 
-Create a new struct called `WebView` which should conform to `UIViewRepresentable`. Just `Web` seems a bit too generic for some reason.
+Create a new struct called `WebView` which should conform to `UIViewRepresentable`.
 
 ```swift
 import WebKit
@@ -24,7 +24,7 @@ struct WebView: UIViewRepresentable {
 }
 ```
 
-*It confused me when I realised that Apple did **exactly** that when they called the SwiftUI equivalent for `MKMapView` just `Map`.*
+*Keeping with Apples naming conventions for SwiftUI it should just be called `Web` but that seemed a bit odd to me. It also confused me when I realised that Apple did **exactly** that when they called the SwiftUI equivalent for `MKMapView` just `Map`.*
 
 Add a property called `url`. You can define this with `String` or `URL` as its type depending on where you want to implement the error handling in case the supplied URL is invalid.
 ```swift
