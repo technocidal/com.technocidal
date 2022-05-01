@@ -4,6 +4,7 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
+    {% if page.path_to_image %}
     <style>
       .post-image-container {
         margin-bottom: 1rem;
@@ -16,6 +17,7 @@ layout: default
     <div class="post-image-container">
       <img class="post-image" src="{{ page.path_to_image }}" />
     </div>
+    {% endif %}
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
