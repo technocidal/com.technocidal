@@ -6,4 +6,5 @@ vendor
 
 Gemfile.lock
 dependencies
-/assets/resized
+/assets/resized
+.DS_Store
