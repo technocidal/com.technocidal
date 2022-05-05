@@ -4,7 +4,7 @@ title: SwiftUI - Displaying Web Content
 tags: tutorial swift swiftui software
 path_to_image: /assets/macbook+coding.jpg 
 ---
-SwiftUI has been in released almost 3 years ago but it still has some pretty obvious holes in its capabilities. I'm partial to the issue that you can't change the background color of list items in a list-style `Picker` or any layout specifics of that component to be honest. Admittedly this is a minor annoyance when you realise that there is no SwiftUI equivalent for `WKWebView`. Luckily the implementation of a simple UIKit wrapper is straight forward.
+SwiftUI was first released almost 3 years ago but it's still lacking some pretty fundamental functionality. I'm partial to the issue that you can't change the background color of list items in a list-style `Picker` or any layout specifics of that component to be honest. Admittedly this is a minor annoyance when you realise that there is no SwiftUI equivalent for `WKWebView`. Luckily the implementation of a simple UIKit wrapper is straight forward.
 
 ## Implementation
 
