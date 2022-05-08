@@ -28,10 +28,19 @@ twitter_username: technocidal
 github_username:  technocidal
 
 # Build settings
-theme: minima
 show_excerpts: true
 plugins:
   - jekyll-feed
+  
+header_pages:
+  - resume.markdown
+  - about.markdown
+
+theme: minima
+minima:
+  social_links:
+    twitter: technocidal
+    github: technocidal
 
 # Exclude from processing.
 # The following items will not be processed, by default.
