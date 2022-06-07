@@ -33,7 +33,6 @@ plugins:
   - jekyll-feed
   
 header_pages:
-  - resume.markdown
   - about.markdown
 
 theme: minima
