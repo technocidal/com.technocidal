@@ -4,7 +4,7 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    {% if page.path_to_image %}
+    {% if page.image %}
     <style>
       .post-image-container {
         margin-bottom: 1rem;
@@ -17,7 +17,7 @@ layout: default
       }
     </style>
     <div class="post-image-container">
-      <img class="post-image" src="{{ page.path_to_image }}?nf_resize=smartcrop&w=740&h=480" width="740px" height="480px" />
+      <img class="post-image" src="{{ page.image }}?nf_resize=smartcrop&w=740&h=480" width="740px" height="480px" />
     </div>
     {% endif %}
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
