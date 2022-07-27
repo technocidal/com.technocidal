@@ -1,7 +1,7 @@
 ---
 layout: post+image
 title: SwiftUI - Displaying Web Content
-date: 2022-05-01T19:00:33.505Z
+date: 2022-05-01T18:00:33.505Z
 image: /assets/2022-05-01-swiftui-displaying-web-content.jpeg
 tags: tutorial swift swiftui software
 ---
