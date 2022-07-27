@@ -22,10 +22,19 @@ collections:
   editor:
     preview: false
   files:
-    - label: 'About Page'
+    - label: 'About'
       name: 'about'
       file: 'about.md'
       fields:
         - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
         - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
+        - { label: 'Permalink', name: 'permalink', widget: 'string', default: 'about' }
+        - { label: 'Body', name: 'body', widget: 'markdown' }
+    - label: 'Resume'
+      name: 'resume'
+      file: 'resume.md'
+      fields:
+        - { label: 'Title', name: 'title', widget: 'hidden', default: 'resume' }
+        - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'resume' }
+        - { label: 'Permalink', name: 'permalink', widget: 'string', default: 'resume' }
         - { label: 'Body', name: 'body', widget: 'markdown' }
