@@ -1,6 +1,8 @@
 ---
-layout: post
+layout: post+image
 title: Building a home coffee setup
+tags: home coffee hobby  
+path_to_image: https://images.unsplash.com/photo-1581068106019-5aa70c6ab424?ixid=MnwzMDM5ODF8MHwxfHNlYXJjaHw1fHxlc3ByZXNzbyUyMG1hY2hpbmV8ZW58MHx8fHwxNjU4OTMwMTI0&ixlib=rb-1.2.1
 ---
 For many years now the way that I've been improving my coffee game was by taking a lot more care buying coffee beans as I was a bit initimidated by the sheer amount of options when it comes to fancy home coffee setups.
 
