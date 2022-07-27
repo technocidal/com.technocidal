@@ -2,7 +2,7 @@
 layout: post+image
 title: Building a home coffee setup
 date: 2022-07-25T19:00:00.833Z
-iamge: /assets/2022-07-25-building-a-home-coffee-setup.jpeg
+image: /assets/2022-07-25-building-a-home-coffee-setup.jpeg
 tags: home coffee hobby
 ---
 For many years now the way that I've been improving my coffee game was by taking a lot more care buying coffee beans as I was a bit initimidated by the sheer amount of options when it comes to fancy home coffee setups.
