@@ -4,6 +4,7 @@ author:
   name: Johannes Ebeling
   email: hello@technocidal.com
 description: Technocidal is created by me, Johannes Ebeling. I'm a father, software engineer and aspiring coffee snob.
+url: "https://technocidal.com"
 
 # Build settings
 show_excerpts: true
@@ -31,6 +32,9 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - SECURITY.md
+  - Brewfile
+  - Brewfile.lock.json
 
 plugins:
   - jekyll-feed
