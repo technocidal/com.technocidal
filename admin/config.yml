@@ -17,3 +17,15 @@ collections:
     - { label: 'Featured Image', name: 'path_to_image', widget: 'image', required: false }
     - { label: 'Tags', name: 'tags', widget: 'string', required: false }
     - { label: 'Body', name: 'body', widget: 'markdown' }
+- name: 'pages'
+  label: 'Pages'
+  editor:
+    preview: false
+  files:
+    - label: 'About Page'
+      name: 'about'
+      file: 'about.md'
+      fields:
+        - { label: 'Title', name: 'title', widget: 'hidden', default: 'about' }
+        - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'about' }
+        - { label: 'Body', name: 'body', widget: 'markdown' }
