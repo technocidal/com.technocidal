@@ -15,7 +15,7 @@ layout: default
       }
     </style>
     <div class="post-image-container">
-      <img class="post-image" src="{{ page.path_to_image }}" />
+      <img class="post-image" src="{{ page.path_to_image }}?nf_resize=smartcrop&w=740h=480" width="740px" height="480px" />
     </div>
     {% endif %}
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
