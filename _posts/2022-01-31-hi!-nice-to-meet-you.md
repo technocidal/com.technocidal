@@ -8,4 +8,4 @@ I intent to upload as much stuff as possible here. Expect notes, discoveries and
 This site will mainly focus on technology and the ups and downs of working in software engineering. 
 My intention for this site is for it to be helpful sometimes and a place of shared suffering at other times. I've a strong background developing for Apple platforms.
 
-Feel free to [contact me](mailto:{{ site.email }}) 📧.
+Feel free to [contact me](mailto:{{ site.author.email }}) 📧.
