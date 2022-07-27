@@ -2,7 +2,7 @@
 layout: post+image
 title: SwiftUI - Displaying Web Content
 tags: tutorial swift swiftui software
-path_to_image: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixid=MnwzMDM5ODF8MHwxfHNlYXJjaHwyMHx8Y29kaW5nfGVufDB8fHx8MTY1ODkxNDE3OQ&ixlib=rb-1.2.1
+path_to_image: /assets/2022-05-01-swiftui-displaying-web-content.jpeg
 ---
 SwiftUI was first released almost 3 years ago but it's still lacking some pretty fundamental functionality. I'm partial to the issue that you can't change the background color of list items in a list-style `Picker` or any layout specifics of that component to be honest. Admittedly this is a minor annoyance when you realise that there is no SwiftUI equivalent for `WKWebView`. Luckily the implementation of a simple UIKit wrapper is straight forward.
 
