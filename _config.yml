@@ -17,6 +17,7 @@ minima:
 
 header_pages:
   - about.md
+  - gear.md
   - resume.md
 
 theme: minima
