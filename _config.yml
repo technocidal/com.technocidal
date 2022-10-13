@@ -9,8 +9,10 @@ url: "https://technocidal.com"
 # Build settings
 show_excerpts: true
 
+theme: minima
+
 minima:
-  skin: classic
+  skin: auto
   social_links:
     twitter: technocidal
     github: technocidal
@@ -19,8 +21,6 @@ header_pages:
   - about.md
   - gear.md
   - resume.md
-
-theme: minima
 
 exclude:
   - .sass-cache/
