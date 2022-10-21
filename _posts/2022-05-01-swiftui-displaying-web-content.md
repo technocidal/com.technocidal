@@ -28,6 +28,7 @@ struct WebView: UIViewRepresentable {
 *Keeping with Apples naming conventions for SwiftUI it should just be called `Web` but that seemed a bit odd to me. It also confused me when I realised that Apple did **exactly** that when they called the SwiftUI equivalent for `MKMapView` just `Map`.*
 
 Add a property called `url`. You can define this with `String` or `URL` as its type depending on where you want to implement the error handling in case the supplied URL is invalid.
+
 ```swift
 import WebKit
 
@@ -38,6 +39,7 @@ struct WebView: UIViewRepresentable {
 ```
 
 Now you're ready to implement the two methods required by the `UIViewRepresentable` protocol. Let's start with `makeUIView(context:)`.
+
 ```swift
 import WebKit
 
@@ -50,7 +52,9 @@ struct WebView: UIViewRepresentable {
   }
 }
 ```
+
 Pretty straight forward, right? Now we just need to load the supplied URL and we're done. Continue by implementing the second required function like so. 
+
 ```swift
 import WebKit
 
@@ -67,6 +71,7 @@ struct WebView: UIViewRepresentable {
   }
 }
 ```
+
 This function tries to create a URL using the provided string. If it succeeds the newly created URL is passed to a `URLRequest` which is subsequently handed to the `load(_:)` function of our `WKWebView` instance.
 
 That's all there is to it. Be aware that `WKWebView` is not equivalent to `SFSafariViewController` which basically embeds Safari into your application giving users access to Password Autofill for example.
@@ -75,4 +80,10 @@ That's all there is to it. Be aware that `WKWebView` is not equivalent to `SFSaf
 
 Wrapping `WKWebView` like this gives you a quick and easy way to show web content inside your application.
 
-If you found this helpful, feel free to let me know. You can send me an E-Mail to [{{ site.email }}](mailto:{{ site.email }}) or find me on Twitter [@technocidal](https://twitter.com/technocidal).
+If you found this helpful, feel free to let me know. You can send me an E-Mail to \[{{ site.email }}](mailto:{{ site.email }}) or find me on Twitter [@technocidal](https://twitter.com/technocidal).
+
+## Update
+
+Although this method works great for opening links to external content inside an app I'd highly discourage you from using it for that purpose. Due to the excellent research by [Felix Krause](https://krausefx.com/blog/announcing-inappbrowsercom-see-what-javascript-commands-get-executed-in-an-in-app-browser) it became apparent that this is misused by a lot of companies to track users, attribute ads or personalize content. Developers should take this as a hint to switch to `SFSafariViewController` or open Safari outright. 
+
+It's still completely fine to use this to show web content like HTML responses from your own servers, a Markdown preview screen for an editor or maybe a specific piece of UI was just easier to build using web technologies.
