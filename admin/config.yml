@@ -38,3 +38,11 @@ collections:
         - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'resume' }
         - { label: 'Permalink', name: 'permalink', widget: 'string', default: 'resume' }
         - { label: 'Body', name: 'body', widget: 'markdown' }
+    - label: 'Gear'
+      name: 'gear'
+      file: 'gear.md'
+      fields:
+        - { label: 'Title', name: 'title', widget: 'hidden', default: 'gear' }
+        - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'gear' }
+        - { label: 'Permalink', name: 'permalink', widget: 'string', default: 'gear' }
+        - { label: 'Body', name: 'body', widget: 'markdown' }
