@@ -80,7 +80,7 @@ That's all there is to it. Be aware that `WKWebView` is not equivalent to `SFSaf
 
 Wrapping `WKWebView` like this gives you a quick and easy way to show web content inside your application.
 
-If you found this helpful, feel free to let me know. You can send me an E-Mail to \[{{ site.email }}](mailto:{{ site.email }}) or find me on Twitter [@technocidal](https://twitter.com/technocidal).
+If you found this helpful, feel free to let me know. You can send me an E-Mail to \[{{ site.author.email }}](mailto:{{ site.author.email }}) or find me on Twitter [@technocidal](https://twitter.com/technocidal).
 
 ## Update
 
