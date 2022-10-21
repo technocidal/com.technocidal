@@ -84,6 +84,6 @@ If you found this helpful, feel free to let me know. You can send me an E-Mail t
 
 ## Update
 
-Although this method works great for opening links to external content inside an app I'd highly discourage you from using it for that purpose. Due to the excellent research by [Felix Krause](https://krausefx.com/blog/announcing-inappbrowsercom-see-what-javascript-commands-get-executed-in-an-in-app-browser) it became apparent that this is misused by a lot of companies to track users, attribute ads or personalize content. Developers should take this as a hint to switch to `SFSafariViewController` or open Safari outright. 
+Although this method works great for opening links to external content inside an app I'd highly discourage you from using it for that purpose. Due to the excellent research by [Felix Krause](https://krausefx.com/blog/announcing-inappbrowsercom-see-what-javascript-commands-get-executed-in-an-in-app-browser) it became apparent that this is misused by a lot of companies to track users, attribute ads or personalize content. Developers should take this as a hint to switch to `SFSafariViewController` or open Safari outright. Felix goes into a lot more details so I **highly** encourage you to check out his work.
 
 It's still completely fine to use this to show web content like HTML responses from your own servers, a Markdown preview screen for an editor or maybe a specific piece of UI was just easier to build using web technologies.
