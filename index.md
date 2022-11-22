@@ -4,3 +4,4 @@
 
 layout: home
 ---
+<a hidden rel="me" href="https://mstdn.social/@technocidal">Mastodon</a>
