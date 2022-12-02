@@ -1,9 +1,3 @@
----
-layout: default
-title: Security
-permalink: /security/
----
-
 # Security Policy
 
 ## Supported Versions

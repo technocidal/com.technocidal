@@ -22,9 +22,8 @@ header_pages:
   - _pages/gear.md
   - _pages/resume.md
 
-include:
+include:  
   - _pages
-  - SECURITY.md
 
 exclude:
   - .sass-cache/
