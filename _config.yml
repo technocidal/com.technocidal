@@ -18,9 +18,13 @@ minima:
     github: technocidal
 
 header_pages:
-  - about.md
-  - gear.md
-  - resume.md
+  - _pages/about.md
+  - _pages/gear.md
+  - _pages/resume.md
+
+include:
+  - _pages
+  - SECURITY.md
 
 exclude:
   - .sass-cache/
