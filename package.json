@@ -1,0 +1,22 @@
+{
+  "name": "com.technocidal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technocidal/com.technocidal.git"
+  },
+  "author": "Johannes Ebeling",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/technocidal/com.technocidal/issues"
+  },
+  "homepage": "https://github.com/technocidal/com.technocidal#readme",
+  "dependencies": {
+    "esbuild": "^0.15.16"
+  }
+}
