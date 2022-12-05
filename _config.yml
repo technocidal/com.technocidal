@@ -16,6 +16,9 @@ minima:
   social_links:
     twitter: technocidal
     github: technocidal
+    mastodon:
+      - username: technocidal
+        instance: mastodon.world
 
 header_pages:
   - _pages/about.md
