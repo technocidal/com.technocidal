@@ -14,11 +14,10 @@ theme: minima
 minima:
   skin: auto
   social_links:
-    twitter: technocidal
-    github: technocidal
-    mastodon:
-      - username: technocidal
-        instance: mastodon.world
+    - { platform: rss, user_url: "/feed.xml" }
+    - { platform: github,  user_url: "https://github.com/technocidal" }
+    - { platform: twitter, user_url: "https://twitter.com/technocidal" }
+    - { platform: mastodon, user_url: "https://mastodon.world/@technocidal"}
 
 header_pages:
   - _pages/about.md
