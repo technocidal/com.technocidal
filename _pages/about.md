@@ -3,9 +3,6 @@ layout: about
 title: About
 permalink: /about/
 ---
-
-{{ site.description }}
-
 > **technocidal**
 >  
 > homicide for technology; wanting to kill a piece of electrical equipment  
