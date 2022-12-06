@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gem 'jekyll', '~> 4.2'
 gem "minima", git: 'https://github.com/jekyll/minima'
 gem "jekyll-feed"
+gem "jekyll-npm-run"
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", "~> 1.2"
