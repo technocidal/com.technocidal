@@ -26,8 +26,10 @@ layout: default
       }
     </style>
     <div class="post-image-container">
-      <img class="post-image" src="{{ page.image.contentUrl }}" height="480px" />
-      <p class="post-image-caption"> Image by {{ page.image.author }} </p>
+      <figure class="post-image-container">
+        <img class="post-image" src="{{ page.image.contentUrl }}" height="480px" />
+        <figcaption class="post-image-caption">Created by {{ page.image.author }}</figcaption>
+      </figure>
     </div>
     {% endif %}
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
