@@ -2,9 +2,9 @@
   "name": "com.technocidal",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "assets/js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "esbuild assets/js/index.js --bundle --outfile=_site/dist.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/technocidal/com.technocidal#readme",
   "dependencies": {
+    "@hotwired/stimulus": "^3.2.1"
+  },
+  "devDependencies": {
     "esbuild": "^0.15.16"
   }
 }
