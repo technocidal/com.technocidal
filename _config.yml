@@ -2,7 +2,7 @@ title: Technocidal
 tagline: Apple, Software and other stuff
 author:
   name: Johannes Ebeling
-  email: technocidal@icloud.com
+  email: hello@technocidal.com
 description: Technocidal is created by me, Johannes Ebeling. I'm a father, software engineer and aspiring coffee snob.
 url: "https://technocidal.com"
 
@@ -45,3 +45,4 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-spaceship
