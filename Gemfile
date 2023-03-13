@@ -5,6 +5,7 @@ gem("minima", git: "https://github.com/jekyll/minima")
 
 gem("jekyll-spaceship", group: :jekyll_plugins)
 gem("jekyll-feed", group: :jekyll_plugins)
+gem("jekyll-npm-run", group: :jekyll_plugins)
 gem("jekyll-compose", group: :jekyll_plugins)
 
 platforms(:mingw, :x64_mingw, :mswin, :jruby) do
