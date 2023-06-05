@@ -38,14 +38,19 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-      - name: Deploy to server
-        uses: saubermacherag/ansible-playbook-docker-action@v1.4
+          
+      - name: Run playbook
+        uses: dawidd6/action-ansible-playbook@v2
         with:
-          # Name of the playbook in your workspace.
-          playbookName: deployment/run.yml
-          # Name of the inventory file to use.
-          inventoryFile: deployment/inventory.ini
-          # name of the requirements file to use.
-          requirementsFile: deployment/requirements.yml
-          keyFileVaultPass: ${{ secrets.VAULT_PASSWORD }}
-        
+          # Required, playbook filepath
+          playbook: ./deployment/run.yml
+          # Optional, directory where playbooks live
+          directory: ./
+          # Optional, SSH private key
+          key: ${{secrets.SSH_PRIVATE_KEY}}
+          # Optional, encrypted vault password
+          vault_password: ${{secrets.VAULT_PASSWORD}}
+          # Optional, galaxy requirements filepath
+          requirements: ./deployment/requirements.yml
+          # Optional, additional flags to pass to ansible-playbook
+          options: --verbose
