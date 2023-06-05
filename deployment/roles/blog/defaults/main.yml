@@ -1,0 +1,5 @@
+---
+container:
+    name: "technocidal.com"
+image:
+  name: "ghcr.io/technocidal/com.technocidal:main"

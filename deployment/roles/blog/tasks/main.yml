@@ -1,0 +1,15 @@
+---
+- name: "Pull latest image for blog"
+  containers.podman.podman_image:
+    name: "{{ image.name }}"
+    force: true
+    
+- name: "Start container for blog"
+  containers.podman.podman_container:
+    name: "{{ container.name }}"
+    image: "{{ image.name }}"
+    recreate: true
+    state: "started"
+    ports:
+      - "8080:80/tcp"
+    restart_policy: always

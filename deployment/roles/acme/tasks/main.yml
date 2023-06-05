@@ -1,0 +1,20 @@
+---
+- name: Install acme.sh
+  ansible.builtin.shell: "curl https://get.acme.sh | sh"
+  
+- name: Register account
+  ansible.builtin.shell: "/root/.acme.sh/acme.sh --register-account -m {{ acme_account_email }}"
+  
+- name: Issue certificate
+  ansible.builtin.shell: "/root/.acme.sh/acme.sh --issue --dns dns_linode_v4 --dnssleep 90 -d {{ acme_domain }} -d {{ acme_wildcard_domain }}"
+  environment: 
+    LINODE_V4_API_KEY: "{{ linode_dns_token }}"
+
+- name: Allow NGINX to read certificates
+  community.general.sefcontext:
+    target: '/root/.acme.sh(/.*)?'
+    setype: httpd_sys_content_t
+    state: present
+
+- name: Apply new SELinux file context to filesystem
+  ansible.builtin.command: restorecon -irv /root/.acme.sh

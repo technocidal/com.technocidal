@@ -1,0 +1,56 @@
+---
+- name: Allow NGINX to listen on tcp port 80
+  community.general.seport:
+    ports: "80"
+    proto: "tcp"
+    setype: "http_port_t"
+    state: "present"
+
+- name: Allow NGINX to listen on udp port 80
+  community.general.seport:
+    ports: "80"
+    proto: "udp"
+    setype: "http_port_t"
+    state: "present"
+
+- name: Allow NGINX to listen on tcp port 443
+  community.general.seport:
+    ports: "443"
+    proto: "tcp"
+    setype: "http_port_t"
+    state: "present"
+
+- name: Allow NGINX to listen on udp port 443
+  community.general.seport:
+    ports: "443"
+    proto: "udp"
+    setype: "http_port_t"
+    state: "present"
+    
+- name: permit traffic in default zone for http service
+  ansible.posix.firewalld:
+      service: http
+      permanent: yes
+      immediate: yes
+      state: enabled
+      
+- name: permit traffic in default zone for https service
+  ansible.posix.firewalld:
+    service: https
+    permanent: yes
+    immediate: yes
+    state: enabled
+    
+- name: Set httpd_can_connect_ftp flag ON and enable it to persist on reboot
+  ansible.posix.seboolean:
+    name: httpd_can_network_connect
+    state: yes
+    persistent: yes
+
+- name: "Manage cli Packages"
+  ansible.builtin.package:
+    name:
+      - "nginx"
+    state: "present"
+  become: true
+  notify: Restart NGINX

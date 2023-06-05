@@ -1,0 +1,26 @@
+---
+- name: "Manage cockpit Packages"
+  ansible.builtin.package:
+    name:
+      - "cockpit"
+      - "cockpit-selinux"
+      - "cockpit-sosreport"
+      - "cockpit-storaged"
+      - "cockpit-podman"
+      - "cockpit-packagekit"
+    state: "present"
+  become: true
+  
+- name: "Manage cockpit Services"
+  ansible.builtin.service:
+    name: "cockpit.socket"
+    state: "started"
+  become: true
+  
+- name: "Manage cockpit Firewall Policy"
+  ansible.posix.firewalld:
+    service: "cockpit"
+    state: "enabled"
+    immediate: true
+    permanent: true
+  become: true

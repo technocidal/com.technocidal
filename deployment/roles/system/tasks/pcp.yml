@@ -1,0 +1,17 @@
+---
+- name: "Manage pcp Packages"
+  ansible.builtin.package:
+    name:
+      - "pcp"
+      - "cockpit-pcp"
+    state: "present"
+  become: true
+
+- name: "Manage pcp Services"
+  ansible.builtin.service:
+    name: "{{ item }}"
+    state: "started"
+  become: true
+  loop:
+    - "pmcd.service"
+    - "pmlogger.service"

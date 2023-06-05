@@ -1,0 +1,27 @@
+---
+- name: "Configure hostname"
+  ansible.builtin.hostname:
+    name: "{{ inventory_hostname }}"
+  become: true
+  
+- name: "Manage cli Packages"
+  ansible.builtin.package:
+    name:
+      - "bash"
+      - "bash-completion"
+      - "tmux"
+      - "wget"
+      - "curl"
+      - "podman"
+      - "htop"
+      - "jq"
+    state: "present"
+  become: true
+  
+- include_tasks: chrony.yml
+- include_tasks: selinux.yml
+- include_tasks: firewalld.yml
+- include_tasks: tuned.yml
+- include_tasks: pcp.yml
+- include_tasks: cockpit.yml
+- include_tasks: avahi.yml

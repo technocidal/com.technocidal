@@ -1,0 +1,16 @@
+- name: "Configure Cloud Server"
+  hosts: "all"
+  
+  vars_files:
+    - "vars/main.yml"
+    - "vars/vault.yml"
+
+  roles:
+    - role: system
+      tags: system
+    - role: nginx
+      tags: nginx
+    - role: acme
+      tags: acme
+    - role: blog
+      tags: blog 

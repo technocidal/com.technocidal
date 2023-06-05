@@ -1,0 +1,15 @@
+---
+- name: "Manage SELinux Packages"
+  ansible.builtin.package:
+    name:
+      - "libselinux"
+      - "libselinux-utils"
+      - "setroubleshoot-server"
+    state: "present"
+  become: true
+
+- name: "Manage SELinux Configuration"
+  ansible.posix.selinux:
+    policy: "targeted"
+    state: "enforcing"
+  become: true

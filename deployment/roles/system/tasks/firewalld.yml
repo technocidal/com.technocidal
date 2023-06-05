@@ -1,0 +1,13 @@
+---
+- name: "Manage firewalld Packages"
+  ansible.builtin.package:
+    name: "firewalld"
+    state: "present"
+  become: true
+
+- name: "Manage firewalld Services"
+  ansible.builtin.service:
+    name: "firewalld.service"
+    state: "started"
+    enabled: true
+  become: true

@@ -1,0 +1,13 @@
+---
+- name: "Manage tuned Packages"
+  ansible.builtin.package:
+    name: "tuned"
+    state: "present"
+  become: true
+  
+- name: "Manage tuned Service"
+  ansible.builtin.service:
+    name: "tuned.service"
+    state: "started"
+    enabled: true
+  become: true

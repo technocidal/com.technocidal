@@ -1,0 +1,23 @@
+---
+- name: "Manage avahi Packages"
+  ansible.builtin.package:
+    name:
+      - "avahi"
+      - "nss-mdns"
+    state: "present"
+  become: true
+
+- name: "Manage avahi Services"
+  ansible.builtin.service:
+    name: "avahi-daemon.service"
+    state: "started"
+    enabled: true
+  become: true
+
+- name: "Manage avahi Firewall Policy"
+  ansible.posix.firewalld:
+    service: "mdns"
+    state: "enabled"
+    permanent: true
+    immediate: true
+  become: true
