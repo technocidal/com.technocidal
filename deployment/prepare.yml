@@ -1,14 +1,14 @@
 ---
 - name: "Create ansible user"
   hosts: "all"
-  
+
   vars:
     - ansible_user: root
-  
+
   vars_files:
     - "vars/vars.yml"
     - "vars/vault.yml"
-  
+
   tasks:
     - name: Create a login user
       user:
@@ -16,7 +16,7 @@
         password: "{{ ansible_become_pass_hash }}"
         groups: wheel
         state: present
-        
+
     - name: Set authorized key
       authorized_key:
         user: ansible
@@ -26,10 +26,17 @@
 - name: "Prepare hosts to accept deployments"
   hosts: "all"
   become: true
-  
+
   vars_files:
     - "vars/vars.yml"
     - "vars/vault.yml"
-  
+
+  tasks:
+    - name: Enable linger
+      command: "loginctl enable-linger"
+      become: true
+
   roles:
+    - role: common
+    - { role: exploide.dnf-automatic, dnf_automatic_reboot: true, dnf_automatic_reboot_time: "04:00" }
     - role: caddy

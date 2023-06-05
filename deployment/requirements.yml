@@ -2,3 +2,6 @@
 collections:
   - name: ansible.posix
   - name: community.general
+
+roles:
+  - name: exploide.dnf-automatic
