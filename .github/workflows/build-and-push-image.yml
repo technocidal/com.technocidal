@@ -38,3 +38,14 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+      - name: Deploy to server
+        uses: saubermacherag/ansible-playbook-docker-action@v1.4
+        with:
+          # Name of the playbook in your workspace.
+          playbookName: deployment/run.yml
+          # Name of the inventory file to use.
+          inventoryFile: deployment/inventory.ini
+          # name of the requirements file to use.
+          requirementsFile: deployment/requirements.yml
+          keyFileVaultPass: ${{ secrets.VAULT_PASSWORD }}
+        
