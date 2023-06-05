@@ -3,7 +3,7 @@
   containers.podman.podman_image:
     name: "{{ image.name }}"
     force: true
-    
+
 - name: "Start container for blog"
   containers.podman.podman_container:
     name: "{{ container.name }}"
