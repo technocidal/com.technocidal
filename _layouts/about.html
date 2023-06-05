@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: base
 ---
 <article class="post">
 
@@ -11,13 +11,13 @@ layout: default
         gap: 1rem;
       }
       
-      .about-image {
+      .avatar {
         border-radius: 50%;
         object-fit: cover;
       }
     </style>
     <div class="header-container">
-      <img class="about-image" src="http://1.gravatar.com/avatar/2fc506c34c3dd44423eb89242e11aea7?s=360" width="180" height="180"/>
+      {% avatar technocidal size=180 %}
       <div>
         <h1 class="post-title">{{ page.title | escape }}</h1>
         <p>{{ site.description }}</p>
