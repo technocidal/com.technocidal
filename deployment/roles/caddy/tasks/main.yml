@@ -1,0 +1,86 @@
+---
+- name: Install fedora copr plugin (dnf)
+  package:
+    name: dnf-command(copr)
+    state: present
+
+- name: Enable caddy repo
+  command: dnf copr enable -y @caddy/caddy
+  register: dnf_repo_enable
+  changed_when: false
+
+- name: Install caddy package
+  package:
+    name: caddy
+    state: present
+  
+- name: Allow Caddy to listen on tcp port 80
+  community.general.seport:
+    ports: "80"
+    proto: "tcp"
+    setype: "http_port_t"
+    state: "present"
+  become: true
+
+- name: Allow Caddy to listen on udp port 80
+  community.general.seport:
+    ports: "80"
+    proto: "udp"
+    setype: "http_port_t"
+    state: "present"
+  become: true
+
+- name: Allow Caddy to listen on tcp port 443
+  community.general.seport:
+    ports: "443"
+    proto: "tcp"
+    setype: "http_port_t"
+    state: "present"
+  become: true
+
+- name: Allow Caddy to listen on udp port 443
+  community.general.seport:
+    ports: "443"
+    proto: "udp"
+    setype: "http_port_t"
+    state: "present"
+  become: true
+    
+- name: permit traffic in default zone for http service
+  ansible.posix.firewalld:
+    service: http
+    permanent: yes
+    immediate: yes
+    state: enabled
+  become: true
+      
+- name: permit traffic in default zone for https service
+  ansible.posix.firewalld:
+    service: https
+    permanent: yes
+    immediate: yes
+    state: enabled
+  become: true
+    
+- name: Set httpd_can_connect_ftp flag ON and enable it to persist on reboot
+  ansible.posix.seboolean:
+    name: httpd_can_network_connect
+    state: yes
+    persistent: yes
+  become: true
+  
+- name: Set CAP_NET_BIND_SERVICE on caddy binary
+  command: setcap 'CAP_NET_BIND_SERVICE=+eip' /usr/bin/caddy
+  become: true
+
+- name: Copy Caddyfile
+  template:
+    src: "Caddyfile.j2"
+    dest: "/etc/caddy/Caddyfile"
+  become: true
+  notify: restart caddy
+  
+- name: Start Caddy as a service
+  service:
+    name: caddy
+    state: started

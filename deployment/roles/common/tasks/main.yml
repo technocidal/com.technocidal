@@ -1,20 +1,20 @@
 ---
 - name: "Configure hostname"
-  ansible.builtin.hostname:
+  hostname:
     name: "{{ inventory_hostname }}"
   become: true
   
 - name: "Manage cli Packages"
-  ansible.builtin.package:
+  package:
     name:
       - "bash"
       - "bash-completion"
       - "tmux"
       - "wget"
       - "curl"
-      - "podman"
       - "htop"
       - "jq"
+      - "podman"
     state: "present"
   become: true
   

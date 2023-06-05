@@ -16,7 +16,7 @@ minima:
   social_links:
     - { platform: rss, user_url: "/feed.xml" }
     - { platform: github,  user_url: "https://github.com/technocidal" }
-    - { platform: mastodon, user_url: "https://mastodon.social/@technocidal"}
+    - { platform: mastodon, user_url: "https://mastodon.social/@technocidal" }
 
 header_pages:
   - _pages/about.md

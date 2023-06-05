@@ -38,19 +38,3 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          
-      - name: Run playbook
-        uses: dawidd6/action-ansible-playbook@v2
-        with:
-          # Required, playbook filepath
-          playbook: ./deployment/run.yml
-          # Optional, directory where playbooks live
-          directory: ./
-          # Optional, SSH private key
-          key: ${{secrets.SSH_PRIVATE_KEY}}
-          # Optional, encrypted vault password
-          vault_password: ${{secrets.VAULT_PASSWORD}}
-          # Optional, galaxy requirements filepath
-          requirements: ./deployment/requirements.yml
-          # Optional, additional flags to pass to ansible-playbook
-          options: --verbose

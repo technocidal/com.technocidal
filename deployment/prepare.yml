@@ -1,0 +1,35 @@
+---
+- name: "Create ansible user"
+  hosts: "all"
+  
+  vars:
+    - ansible_user: root
+  
+  vars_files:
+    - "vars/vars.yml"
+    - "vars/vault.yml"
+  
+  tasks:
+    - name: Create a login user
+      user:
+        name: ansible
+        password: "{{ ansible_become_pass_hash }}"
+        groups: wheel
+        state: present
+        
+    - name: Set authorized key
+      authorized_key:
+        user: ansible
+        state: present
+        key: "{{ lookup('onepassword', 'Private', field='public key') }}"
+
+- name: "Prepare hosts to accept deployments"
+  hosts: "all"
+  become: true
+  
+  vars_files:
+    - "vars/vars.yml"
+    - "vars/vault.yml"
+  
+  roles:
+    - role: caddy

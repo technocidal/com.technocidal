@@ -1,0 +1,9 @@
+{
+  "actions" : {
+    "run" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\ncd deployment\nsource ~\/.venv\/com-technocidal-deployment\/bin\/activate\nansible-playbook update-blog.yml"
+    }
+  },
+  "openLogOnRun" : "start"
+}

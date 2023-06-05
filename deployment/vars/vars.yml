@@ -1,0 +1,4 @@
+timezone: "Etc/UTC"
+
+ansible_become_pass: "{{ lookup('onepassword', 'vault_ansible_user_password', field='password') }}"
+ansible_become_pass_hash: "{{ vault_ansible_user_password }}"
